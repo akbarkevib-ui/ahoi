@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spesial Invitation Buat Puput Istri Jeno 🐰✨</title>
+  
+  <!-- Tailwind CSS & Canvas Confetti -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  
+  <!-- Google Fonts: Quicksand & Fredoka -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            fredoka: ['Fredoka', 'sans-serif'],
+            quicksand: ['Quicksand', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #FFF0F5 0%, #F5E8FF 50%, #FFE4E8 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+      user-select: none;
+    }
+    .font-heading {
+      font-family: 'Fredoka', cursive;
+    }
+
+    /* Stiker Melayang di Background */
+    @keyframes floating {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(3deg); }
+    }
+    .animate-floating {
+      animation: floating 3.5s ease-in-out infinite;
+    }
+
+    /* Efek Goyang Saat Tombol Ditolak */
+    @keyframes wobble {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-8px) rotate(-3deg); }
+      40% { transform: translateX(8px) rotate(3deg); }
+      60% { transform: translateX(-5px) rotate(-1deg); }
+      80% { transform: translateX(5px) rotate(1deg); }
+    }
+    .animate-wobble {
+      animation: wobble 0.4s ease-in-out;
+    }
+
+    /* Animasi Kelinci Utama */
+    .bunny-idle {
+      animation: bunnyFloat 2.4s ease-in-out infinite;
+      transform-origin: center bottom;
+    }
+    @keyframes bunnyFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
+    }
+
+    .ear-left {
+      transform-origin: 50px 55px;
+      animation: earWiggleL 2.2s ease-in-out infinite;
+    }
+    .ear-right {
+      transform-origin: 90px 55px;
+      animation: earWiggleR 2.2s ease-in-out infinite;
+    }
+    @keyframes earWiggleL {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(-9deg); }
+    }
+    @keyframes earWiggleR {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(9deg); }
+    }
+
+    .eye-blink {
+      transform-origin: center;
+      animation: blink 3.5s infinite;
+    }
+    @keyframes blink {
+      0%, 94%, 100% { transform: scaleY(1); }
+      97% { transform: scaleY(0.1); }
+    }
+
+    /* Animasi Air Mata */
+    .tear-drop {
+      animation: tearFalling 0.7s linear infinite;
+    }
+    @keyframes tearFalling {
+      0% { transform: translateY(0) scale(0.8); opacity: 1; }
+      80% { opacity: 0.9; }
+      100% { transform: translateY(22px) scale(1.2); opacity: 0; }
+    }
+
+    /* Animasi Joget Selebrasi (Klik ke-10) */
+    .bunny-dance {
+      animation: danceAnim 0.45s ease-in-out infinite alternate;
+      transform-origin: center bottom;
+    }
+    @keyframes danceAnim {
+      0% { transform: translateY(0) rotate(-7deg) scale(1.05); }
+      100% { transform: translateY(-14px) rotate(7deg) scale(1.05); }
+    }
+
+    /* Animasi Mini Scene Kartu Lucu */
+    @keyframes hopLeft {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(-8px) rotate(3deg); }
+    }
+    @keyframes hopRight {
+      0%, 100% { transform: translateY(0) rotate(2deg); }
+      50% { transform: translateY(-8px) rotate(-3deg); }
+    }
+    @keyframes wavePaw {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(20deg); }
+    }
+    @keyframes beatHeart {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.25); }
+    }
+    .anim-hop-left { animation: hopLeft 1.8s ease-in-out infinite; }
+    .anim-hop-right { animation: hopRight 1.8s ease-in-out infinite 0.4s; }
+    .anim-wave { animation: wavePaw 1s ease-in-out infinite; transform-origin: bottom left; }
+    .anim-heart { animation: beatHeart 1.2s ease-in-out infinite; }
+
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 20px rgba(255, 133, 162, 0.6), 0 0 40px rgba(232, 215, 255, 0.5); }
+      50% { box-shadow: 0 0 30px rgba(255, 105, 180, 0.9), 0 0 60px rgba(255, 133, 162, 0.8); }
+    }
+    .pulse-glow {
+      animation: pulseGlow 1.4s infinite;
+    }
+  </style>
+</head>
+
+<body class="flex items-center justify-center p-4 relative min-h-screen">
+
+  <!-- Stiker Mengambang di Latar Belakang -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0 select-none opacity-40">
+    <span class="absolute text-4xl top-10 left-8 animate-floating">🐰</span>
+    <span class="absolute text-3xl top-24 right-12 animate-floating" style="animation-delay: 1s;">✨</span>
+    <span class="absolute text-4xl bottom-20 left-12 animate-floating" style="animation-delay: 1.8s;">🎀</span>
+    <span class="absolute text-3xl bottom-32 right-16 animate-floating" style="animation-delay: 0.5s;">🧋</span>
+    <span class="absolute text-4xl top-1/2 left-4 animate-floating" style="animation-delay: 2.2s;">🌸</span>
+    <span class="absolute text-3xl top-1/3 right-6 animate-floating" style="animation-delay: 1.4s;">👑</span>
+    <span class="absolute text-3xl bottom-8 left-1/3 animate-floating" style="animation-delay: 2.7s;">🥐</span>
+  </div>
+
+  <!-- Container Utama -->
+  <div class="relative z-10 w-full max-w-lg">
+
+    <!-- STEP 1: SCREEN AJAKAN DENGAN ANIMASI KELINCI REAKTIF -->
+    <div id="stepInvite" class="bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-2xl border-4 border-pink-200 text-center transition-all duration-300">
+      
+      <!-- Top Badge -->
+      <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-pink-100 text-pink-700 text-xs sm:text-sm font-bold tracking-wide uppercase shadow-sm border border-pink-300 mb-4">
+        <span>VIP LOBBY: PUPUT ISTRI JENO 👑🐰</span>
+      </div>
+
+      <!-- Maskot Animasi Kelinci Interaktif -->
+      <div class="relative w-36 h-36 mx-auto mb-2 flex items-center justify-center">
+        <div class="absolute inset-0 bg-pink-200/50 rounded-full animate-ping opacity-25"></div>
+        <div class="w-32 h-32 bg-gradient-to-b from-pink-50 to-purple-50 rounded-full flex items-center justify-center border-4 border-pink-200 shadow-inner relative overflow-visible">
+          
+          <!-- Karakter SVG Kelinci Animatif -->
+          <svg id="bunnyMascot" class="w-28 h-28 bunny-idle" viewBox="0 0 140 140">
+            <!-- Mahkota Cantik -->
+            <path id="bunnyCrown" d="M 58 45 L 62 33 L 70 41 L 78 33 L 82 45 Z" fill="#FFD700" stroke="#F59E0B" stroke-width="2" stroke-linejoin="round"/>
+            <circle cx="62" cy="33" r="2" fill="#F43F5E"/>
+            <circle cx="70" cy="41" r="2" fill="#3B82F6"/>
+            <circle cx="78" cy="33" r="2" fill="#10B981"/>
+
+            <!-- Telinga Kiri -->
+            <g id="earLeft" class="ear-left">
+              <path d="M 46 56 C 30 15, 60 5, 56 56 Z" fill="#FFFFFF" stroke="#FBCFE8" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M 48 50 C 38 22, 54 16, 53 50 Z" fill="#FFAEC9"/>
+            </g>
+
+            <!-- Telinga Kanan -->
+            <g id="earRight" class="ear-right">
+              <path d="M 94 56 C 110 15, 80 5, 84 56 Z" fill="#FFFFFF" stroke="#FBCFE8" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M 92 50 C 102 22, 86 16, 87 50 Z" fill="#FFAEC9"/>
+            </g>
+
+            <!-- Badan & Kepala Kelinci -->
+            <ellipse cx="70" cy="88" rx="42" ry="36" fill="#FFFFFF" stroke="#FBCFE8" stroke-width="3.5"/>
+
+            <!-- Pipi Merona / Blush -->
+            <ellipse cx="46" cy="92" rx="7" ry="4" fill="#FF85A2" opacity="0.6"/>
+            <ellipse cx="94" cy="92" rx="7" ry="4" fill="#FF85A2" opacity="0.6"/>
+
+            <!-- Wajah Dinamis -->
+            <g id="bunnyFace">
+              <g class="eye-blink">
+                <circle cx="53" cy="82" r="4.5" fill="#374151"/>
+                <circle cx="51.5" cy="80.5" r="1.6" fill="#FFFFFF"/>
+                <circle cx="87" cy="82" r="4.5" fill="#374151"/>
+                <circle cx="85.5" cy="80.5" r="1.6" fill="#FFFFFF"/>
+              </g>
+              <path d="M 64 90 Q 67 94 70 90 Q 73 94 76 90" stroke="#374151" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            </g>
+          </svg>
+
+        </div>
+      </div>
+
+      <!-- Judul & Subtitle -->
+      <h1 class="font-heading text-2xl sm:text-3xl font-extrabold text-pink-600 mb-2 leading-tight">
+        Mau mabar bareng gak Puput? 🎀
+      </h1>
+      <p class="text-sm sm:text-base font-semibold text-purple-700 mb-5 tracking-wide">
+        ✨ Spesial invitation buat Puput istri jeno ✨
+      </p>
+
+      <!-- Gelembung Balasan Interaktif: JENO BAU 🤮 -->
+      <div id="dialogBubble" class="bg-pink-50 border-2 border-pink-200 rounded-2xl p-3.5 mb-6 text-pink-800 text-sm font-bold tracking-wide transition-all duration-300 shadow-sm flex items-center justify-center min-h-[58px]">
+        JENO BAU 🤮
+      </div>
+
+      <!-- Wadah Tombol Interaktif -->
+      <div id="buttonContainer" class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+        <button id="btnLeft" onclick="handleBtnClick('left')" class="w-full sm:w-1/2 py-3.5 px-5 rounded-2xl bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white font-bold text-base shadow-md hover:shadow-lg transition-all active:scale-95 border-2 border-pink-300">
+          Gak Mau 😜
+        </button>
+        <button id="btnRight" onclick="handleBtnClick('right')" class="w-full sm:w-1/2 py-3.5 px-5 rounded-2xl bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600 text-white font-bold text-base shadow-md hover:shadow-lg transition-all active:scale-95 border-2 border-purple-300">
+          Gamau Dulu Deh 💅
+        </button>
+      </div>
+
+    </div>
+
+    <!-- STEP 2: FORM LOBBY & PILIH GAME -->
+    <div id="stepLobby" class="hidden bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-2xl border-4 border-pink-200 transition-all duration-300">
+      
+      <div class="text-center mb-6">
+        <div class="text-4xl mb-2">🥳🐰🎉</div>
+        <h2 class="font-heading text-2xl sm:text-3xl font-bold text-pink-600">
+          Yeay! Puput Fix Mabar!
+        </h2>
+        <p class="text-xs sm:text-sm font-semibold text-purple-600 mt-1">
+          Pilih preferensi mabar spesial buat Puput istri Jeno di bawah ini:
+        </p>
+      </div>
+
+      <div class="space-y-5">
+        
+        <!-- Pilihan Game: Hanya Roblox & Mobile Legends -->
+        <div>
+          <label class="block text-xs font-bold text-pink-700 uppercase tracking-wider mb-2.5">
+            1. Mau Main Game Apa Puput? 🎀
+          </label>
+          <div class="grid grid-cols-2 gap-3 text-xs font-semibold">
+            <label class="flex items-center gap-2.5 p-3.5 bg-pink-50 hover:bg-pink-100 rounded-2xl cursor-pointer border-2 border-pink-200 transition transform hover:scale-[1.02] shadow-sm">
+              <input type="radio" name="game" value="Roblox (Dress to Impress / Obby)" checked class="text-pink-500 focus:ring-pink-400">
+              <span class="text-sm font-bold text-pink-700">Roblox 👗</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-3.5 bg-pink-50 hover:bg-pink-100 rounded-2xl cursor-pointer border-2 border-pink-200 transition transform hover:scale-[1.02] shadow-sm">
+              <input type="radio" name="game" value="Mobile Legends (Siap Gendong)" class="text-pink-500 focus:ring-pink-400">
+              <span class="text-sm font-bold text-pink-700">Mobile Legends 🛡️</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- KOTAK ANIMASI IMUT-IMUT (BEBAS TEKS) -->
+        <div class="p-3 bg-gradient-to-r from-pink-50 via-purple-50 to-pink-50 rounded-2xl border-2 border-dashed border-pink-300 flex items-center justify-center shadow-inner overflow-hidden">
+          <svg class="w-full max-w-xs h-20" viewBox="0 0 300 80">
+            <!-- Kelinci 1: Minum Boba (Kiri) -->
+            <g class="anim-hop-left">
+              <!-- Telinga -->
+              <ellipse cx="50" cy="18" rx="5" ry="14" fill="#FFFFFF" stroke="#FBCFE8" stroke-width="2" transform="rotate(-15 50 18)"/>
+              <ellipse cx="64" cy="18" rx="5" ry="14" fill="#FFFFFF" stroke="#FBCFE8" stroke-width="2" transform="rotate(15 64 18)"/>
+              <ellipse cx="50" cy="18" rx="3" ry="10" fill="#FFAEC9" transform="rotate(-15 50 18)"/>
+              <ellipse cx="64" cy="18" rx="3" ry="10" fill="#FFAEC9" transform="rotate(15 64 18)"/>
+              <!-- Badan -->
+              <ellipse cx="57" cy="46" rx="20" ry="18" fill="#FFFFFF" stroke="#FBCFE8" stroke-width="2.5"/>
+              <!-- Mata & Pipi -->
+              <circle cx="50" cy="42" r="2.5" fill="#374151"/>
+              <circle cx="64" cy="42" r="2.5" fill="#374151"/>
+              <ellipse cx="46" cy="46" rx="3" ry="1.8" fill="#FDA4AF"/>
+              <ellipse cx="68" cy="46" rx="3" ry="1.8" fill="#FDA4AF"/>
+              <path d="M 54 46 Q 57 49 60 46" stroke="#374151" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+              <!-- Gelas Boba Mini -->
+              <rect x="70" y="38" width="18" height="24" rx="4" fill="#FDE68A" stroke="#D97706" stroke-width="1.5"/>
+              <path d="M 68 38 L 90 38" stroke="#D97706" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 80 38 L 84 25" stroke="#FB7185" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="75" cy="54" r="2" fill="#78350F"/>
+              <circle cx="81" cy="56" r="2" fill="#78350F"/>
+              <circle cx="83" cy="50" r="1.8" fill="#78350F"/>
+              <!-- Tangan -->
+              <ellipse cx="68" cy="48" rx="4" ry="3" fill="#FFFFFF" stroke="#FBCFE8" stroke-width="1.5"/>
+            </g>
+
+            <!-- Bagian Tengah: Hati Berdenyut & Bintang Kerlap-Kerlip -->
+            <g transform="translate(150, 42)">
+              <g class="anim-heart">
+                <path d="M 0 -8 C -7 -18, -18 -8, -18 2 C -18 12, 0 20, 0 24 C 0 20, 18 12, 18 2 C 18 -8, 7 -18, 0 -8 Z" fill="#FB7185" transform="scale(0.7) translate(0, -6)"/>
+              </g>
+              <text x="-28" y="-12" font-size="12" class="animate-ping" style="animation-duration: 2s;">✨</text>
+              <text x="18" y="18" font-size="10" class="animate-bounce" style="animation-duration: 1.5s;">🌸</text>
+              <text x="16" y="-15" font-size="11" class="animate-ping" style="animation-duration: 2.4s; animation-delay: 0.5s;">✨</text>
+            </g>
+
+            <!-- Kelinci 2: Melambaikan Tangan Ceria (Kanan) -->
+            <g class="anim-hop-right">
+              <!-- Mahkota Mini -->
+              <path d="M 237 14 L 240 6 L 244 11 L 248 6 L 251 14 Z" fill="#FFD700" stroke="#F59E0B" stroke-width="1"/>
+              <!-- Telinga -->
+              <ellipse cx="236" cy="18" rx="5" ry="14" fill="#FFFFFF" stroke="#FBCFE8" stroke-width="2" transform="rotate(-15 236 18)"/>
+              <ellipse cx="250" cy="18" rx="5" ry="14" fill="#FFFFFF" stroke="#FBCFE8" stroke-width="2" transform="rotate(15 250 18)"/>
+              <ellipse cx="236" cy="18" rx="3" ry="10" fill="#FFAEC9" transform="rotate(-15 236 18)"/>
+              <ellipse cx="250" cy="18" rx="3" ry="10" fill="#FFAEC9" transform="rotate(15 250 18)"/>
+              <!-- Badan -->
+              <ellipse cx="243" cy="46" rx="20" ry="18" fill="#FFFFFF" stroke="#FBCFE8" stroke-width="2.5"/>
+              <!-- Mata Ceria (^ ^) & Pipi -->
+              <path d="M 232 42 Q 236 38 240 42" stroke="#E11D48" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <path d="M 246 42 Q 250 38 254 42" stroke="#E11D48" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <ellipse cx="232" cy="46" rx="3" ry="1.8" fill="#FDA4AF"/>
+              <ellipse cx="254" cy="46" rx="3" ry="1.8" fill="#FDA4AF"/>
+              <path d="M 240 47 Q 243 51 246 47" stroke="#374151" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+              <!-- Tangan Melambai -->
+              <g class="anim-wave">
+                <ellipse cx="222" cy="38" rx="4" ry="7" fill="#FFFFFF" stroke="#FBCFE8" stroke-width="1.5" transform="rotate(-25 222 38)"/>
+              </g>
+              <ellipse cx="258" cy="48" rx="4" ry="4" fill="#FFFFFF" stroke="#FBCFE8" stroke-width="1.5"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Waktu Mabar -->
+        <div>
+          <label class="block text-xs font-bold text-pink-700 uppercase tracking-wider mb-2">
+            2. Kapan Gas Mainnya? ⏰
+          </label>
+          <select id="timeSelect" class="w-full p-3 rounded-xl border-2 border-pink-200 bg-white text-sm font-semibold text-gray-700 focus:outline-none focus:border-pink-500">
+            <option value="Malam ini jam 8-an">Malam ini jam 8-an 🌙</option>
+            <option value="Sore santai besok">Sore santai besok ⛅</option>
+            <option value="Pas weekend puas-puasin">Pas weekend puas-puasin 🏖️</option>
+            <option value="Kapan aja Puput lagi free">Kapan aja Puput lagi free ✨</option>
+          </select>
+        </div>
+
+        <!-- Tombol Cetak Tiket -->
+        <button onclick="generateTicket()" class="w-full py-4 rounded-2xl bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold text-base shadow-lg hover:shadow-xl transform active:scale-95 transition-all">
+          Cetak Tiket VIP & Kirim ke WhatsApp 💌
+        </button>
+
+      </div>
+    </div>
+
+    <!-- STEP 3: TIKET BOARDING PASS DIGITAL -->
+    <div id="stepTicket" class="hidden bg-white/95 backdrop-blur-md rounded-3xl p-6 shadow-2xl border-4 border-pink-200">
+      
+      <div class="border-3 border-dashed border-pink-300 rounded-2xl p-5 bg-gradient-to-b from-pink-50/70 to-purple-50/70 relative">
+        <div class="flex justify-between items-center border-b border-pink-200 pb-3 mb-4">
+          <div>
+            <span class="text-[10px] font-bold tracking-widest text-pink-500 uppercase">MABAR BOARDING PASS</span>
+            <h3 class="font-heading text-lg font-bold text-purple-700">VIP PLAYER: PUPUT 🐰👑</h3>
+          </div>
+          <span class="text-3xl">🎟️</span>
+        </div>
+
+        <div class="space-y-2 text-xs font-semibold text-gray-700 mb-4">
+          <p class="flex justify-between">
+            <span class="text-gray-500">Gelar:</span>
+            <span class="text-pink-600 font-bold">Istri Sah Jeno ✨</span>
+          </p>
+          <p class="flex justify-between">
+            <span class="text-gray-500">Pilihan Game:</span>
+            <span id="ticketGame" class="text-purple-700 font-bold">Roblox</span>
+          </p>
+          <p class="flex justify-between">
+            <span class="text-gray-500">Traktiran:</span>
+            <span id="ticketTreat" class="text-purple-700 font-bold">Boba & Snacks Enak 🧋🥐</span>
+          </p>
+          <p class="flex justify-between">
+            <span class="text-gray-500">Jadwal:</span>
+            <span id="ticketTime" class="text-purple-700 font-bold">Malam ini</span>
+          </p>
+          <p class="flex justify-between">
+            <span class="text-gray-500">Jaminan Partner:</span>
+            <span class="text-emerald-600 font-bold">No Toxic & Siap Backup 100%</span>
+          </p>
+        </div>
+
+        <div class="border-t border-pink-200 pt-3 text-center">
+          <p class="text-[11px] text-pink-600 font-bold tracking-widest uppercase mb-1">KODE TIKET: PUPUT-JENO-FOREVER</p>
+          <div class="flex justify-center tracking-widest text-gray-400 font-mono text-xs select-none">
+            ||| | |||| || | ||||| ||| |||| |
+          </div>
+        </div>
+      </div>
+
+      <!-- Tombol WhatsApp Langsung ke Nomor Anda -->
+      <div class="mt-5 space-y-2.5">
+        <a id="btnSendWa" href="#" target="_blank" class="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm shadow-md transition transform active:scale-95">
+          <span>Kirim Konfirmasi ke WhatsApp 📱</span>
+        </a>
+        <button onclick="copyMessageText()" class="w-full py-2.5 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-xs transition">
+          Salin Template Teks 📋
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    // Nomor WhatsApp Otomatis
+    const MY_WA_NUMBER = "628557235383";
+
+    let rejectCount = 0;
+    const maxRejects = 10;
+
+    // Setiap isi kolom dialog diisi: JENO BAU 🤮
+    const rejectTexts = [
+      { left: "Gak Mau 😜", right: "Gamau Dulu Deh 💅", quote: "JENO BAU 🤮" },
+      { left: "Masih Gamau 😝", right: "Sibuk Haluin Jeno 👑", quote: "JENO BAU 🤮🤮" },
+      { left: "Nolak Terus Nih? 🥺", right: "Mikir-mikir Dulu 🤔", quote: "JENO BAU BANGET 🤮" },
+      { left: "Gak Tertarik 🙈", right: "Mau Nonton Jeno Aja ✨", quote: "JENO BAU 🤮🤮🤮" },
+      { left: "No, Big No! 🙅‍♀️", right: "Beneran Gamau! 😤", quote: "POKOKNYA JENO BAU 🤮" },
+      { left: "Tetep Gamau 💅", right: "Gak Mempan Bujukannya 😋", quote: "JENO BAU 🤮🤮" },
+      { left: "Males Main 🥱", right: "Gamauuu Pokoknya 🏃‍♀️", quote: "SUMPAH JENO BAU BANGET 🤮" },
+      { left: "Jual Mahal Dulu 💁‍♀️", right: "Belum Mau 🙃", quote: "JENO BAU 🤮🤮🤮" },
+      { left: "Pencetan Terakhir Nih? 🤫", right: "Gak Mau Banget! 🤭", quote: "TETEP JENO BAU 🤮" }
+    ];
+
+    // Sintesis Suara Web Audio
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    let audioCtx;
+
+    function playTone(freq, type = 'sine', duration = 0.12) {
+      try {
+        if (!audioCtx) audioCtx = new AudioCtx();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+      } catch (e) {
+        console.log("Audio ready");
+      }
+    }
+
+    function playVictoryMelody() {
+      const notes = [523.25, 659.25, 783.99, 1046.50];
+      notes.forEach((freq, idx) => {
+        setTimeout(() => playTone(freq, 'triangle', 0.25), idx * 120);
+      });
+    }
+
+    // Fungsi Pengganti Ekspresi Wajah Kelinci Animatif
+    function updateBunnyExpression(count) {
+      const face = document.getElementById('bunnyFace');
+      const mascot = document.getElementById('bunnyMascot');
+
+      if (count >= 1 && count <= 3) {
+        // TAHAP 1: Senyum Imut & Kedip
+        face.innerHTML = `
+          <g class="eye-blink">
+            <circle cx="53" cy="82" r="4.5" fill="#374151"/>
+            <circle cx="51.5" cy="80.5" r="1.6" fill="#FFFFFF"/>
+            <circle cx="87" cy="82" r="4.5" fill="#374151"/>
+            <circle cx="85.5" cy="80.5" r="1.6" fill="#FFFFFF"/>
+          </g>
+          <path d="M 64 90 Q 67 94 70 90 Q 73 94 76 90" stroke="#374151" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        `;
+      } else if (count >= 4 && count <= 6) {
+        // TAHAP 2: Cemberut Memelas
+        face.innerHTML = `
+          <path d="M 48 74 Q 54 72 58 76" stroke="#4B5563" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M 92 74 Q 86 72 82 76" stroke="#4B5563" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <circle cx="53" cy="82" r="6" fill="#1F2937"/>
+          <circle cx="51" cy="79.5" r="2.2" fill="#FFFFFF"/>
+          <circle cx="54.5" cy="83.5" r="1.2" fill="#FFFFFF"/>
+          <circle cx="87" cy="82" r="6" fill="#1F2937"/>
+          <circle cx="85" cy="79.5" r="2.2" fill="#FFFFFF"/>
+          <circle cx="88.5" cy="83.5" r="1.2" fill="#FFFFFF"/>
+          <path d="M 64 93 Q 70 88 76 93" stroke="#374151" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        `;
+      } else if (count >= 7 && count <= 9) {
+        // TAHAP 3: Nangis Kejer
+        face.innerHTML = `
+          <path d="M 57 77 L 49 82 L 57 87" stroke="#374151" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M 83 77 L 91 82 L 83 87" stroke="#374151" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <g class="tear-drop">
+            <ellipse cx="45" cy="88" rx="3.5" ry="6" fill="#60A5FA"/>
+            <ellipse cx="44" cy="98" rx="2.5" ry="4" fill="#93C5FD"/>
+          </g>
+          <g class="tear-drop" style="animation-delay: 0.35s;">
+            <ellipse cx="95" cy="88" rx="3.5" ry="6" fill="#60A5FA"/>
+            <ellipse cx="96" cy="98" rx="2.5" ry="4" fill="#93C5FD"/>
+          </g>
+          <ellipse cx="70" cy="95" rx="6" ry="8" fill="#F43F5E"/>
+          <path d="M 64 95 Q 70 91 76 95" fill="#FDA4AF"/>
+        `;
+      } else if (count >= 10) {
+        // TAHAP 4: Joget Selebrasi
+        mascot.classList.remove('bunny-idle');
+        mascot.classList.add('bunny-dance');
+
+        face.innerHTML = `
+          <path d="M 46 82 Q 53 73 60 82" stroke="#E11D48" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+          <path d="M 80 82 Q 87 73 94 82" stroke="#E11D48" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+          <path d="M 62 89 Q 70 102 78 89 Z" fill="#F43F5E" stroke="#BE123C" stroke-width="1.5"/>
+          <text x="36" y="70" font-size="12">✨</text>
+          <text x="96" y="70" font-size="12">✨</text>
+        `;
+      }
+    }
+
+    function handleBtnClick(side) {
+      rejectCount++;
+      playTone(320 + (rejectCount * 45), 'triangle');
+
+      const btnLeft = document.getElementById('btnLeft');
+      const btnRight = document.getElementById('btnRight');
+      const bubble = document.getElementById('dialogBubble');
+      const card = document.getElementById('stepInvite');
+
+      // Goyang Kartu
+      card.classList.remove('animate-wobble');
+      void card.offsetWidth;
+      card.classList.add('animate-wobble');
+
+      // Update Wajah Animasi Kelinci
+      updateBunnyExpression(rejectCount);
+
+      if (rejectCount < maxRejects) {
+        const currentData = rejectTexts[rejectCount - 1];
+        btnLeft.innerText = currentData.left;
+        btnRight.innerText = currentData.right;
+        bubble.innerText = currentData.quote;
+
+      } else if (rejectCount === maxRejects) {
+        triggerConfetti();
+        playVictoryMelody();
+
+        // Teks JENO BAU 🤮 di klik ke-10
+        bubble.innerHTML = "🤮 <b>JENO BAU 🤮 JENO BAU BANGET 🤮</b> 🤮";
+        
+        btnLeft.innerText = "✨ MAU BANGET! 🥰";
+        btnLeft.className = "w-full sm:w-1/2 py-4 px-5 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-500 text-white font-extrabold text-lg shadow-xl pulse-glow transform hover:scale-105 transition active:scale-95 border-2 border-pink-200";
+        btnLeft.onclick = proceedToLobby;
+
+        btnRight.innerText = "Gaskeun Puput Ready! 🚀";
+        btnRight.className = "w-full sm:w-1/2 py-4 px-5 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 text-white font-extrabold text-lg shadow-xl pulse-glow transform hover:scale-105 transition active:scale-95 border-2 border-purple-200";
+        btnRight.onclick = proceedToLobby;
+      }
+    }
+
+    function triggerConfetti() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 90,
+          spread: 80,
+          origin: { y: 0.6 },
+          colors: ['#FF85A2', '#E8D7FF', '#FFB6C1', '#FFE4E1', '#FFD700']
+        });
+      }
+    }
+
+    function proceedToLobby() {
+      triggerConfetti();
+      document.getElementById('stepInvite').classList.add('hidden');
+      document.getElementById('stepLobby').classList.remove('hidden');
+    }
+
+    let finalMessage = "";
+
+    function generateTicket() {
+      const selectedGame = document.querySelector('input[name="game"]:checked')?.value || "Roblox (Dress to Impress / Obby)";
+      const time = document.getElementById('timeSelect').value;
+      const treatString = "Boba Brown Sugar & Snacks Enak 🧋🥐";
+
+      document.getElementById('ticketGame').innerText = selectedGame;
+      document.getElementById('ticketTreat').innerText = treatString;
+      document.getElementById('ticketTime').innerText = time;
+
+      // Pesan WhatsApp otomatis terkirim ke +62 855-7235-383
+      finalMessage = `Halo! 🐰✨ Ini konfirmasi tiket spesial mabar buat Puput istri Jeno:%0A%0A` +
+        `👑 *Gelar:* Puput (Istri Sah Jeno)%0A` +
+        `🎀 *Pilihan Game:* ${selectedGame}%0A` +
+        `🧋 *Traktiran:* ${treatString}%0A` +
+        `⏰ *Waktu Mabar:* ${time}%0A%0A` +
+        `Gak ada nolak lagi, tiketnya udah resmi diterbitkan! Ditunggu di lobby yaa 🚀💖`;
+
+      const waLink = `https://wa.me/${MY_WA_NUMBER}?text=${finalMessage}`;
+      document.getElementById('btnSendWa').setAttribute('href', waLink);
+
+      triggerConfetti();
+      document.getElementById('stepLobby').classList.add('hidden');
+      document.getElementById('stepTicket').classList.remove('hidden');
+    }
+
+    function copyMessageText() {
+      const cleanText = decodeURIComponent(finalMessage.replace(/%0A/g, '\n'));
+      navigator.clipboard.writeText(cleanText).then(() => {
+        alert("Pesan berhasil disalin! Tinggal paste ke WhatsApp 🐰✨");
+      });
+    }
+  </script>
+</body>
+</html>
